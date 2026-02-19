@@ -1,0 +1,586 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPPkwFvWjz6zUBS8eDGcXMH",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/andmila04/aprendendo_a_programar_em_python/blob/main/aprendendo_a_programar_em_python\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "BDxiTrvkbb3u",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "45119aee-f59a-4a9c-e9fa-f17b74c09816"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Sejam bem vindos ao Ocean!\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(\"Sejam bem vindos ao Ocean!\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nome = input('Qual o seu nome: ')\n",
+        "print (f\"Ola, {nome}, seja bem vindo\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2a1U7MS8fjcj",
+        "outputId": "400079e6-aa0d-4651-df04-82b603f90a5a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Qual o seu nome: Mario\n",
+            "Ola, Mario, seja bem vindo\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "idade = int(input(\"Qual a sua idade? \"))\n",
+        "if idade < 13:\n",
+        "  print('crianca')\n",
+        "elif idade < 18:\n",
+        "    print(\"Adolescente\")\n",
+        "elif idade <60:\n",
+        "      print(\"Adulto\")\n",
+        "else:\n",
+        "        print(\"Idoso\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SmRmyRhJg954",
+        "outputId": "b7d70070-a5f6-4211-df0a-be6193ec1a46"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Qual a sua idade? 80\n",
+            "Idoso\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Exercício 1: Cálculo de Bônus de Vendas (RH/Vendas)\n",
+        "\n",
+        "Cenário: Uma empresa decidiu dar um bônus de 10% sobre o faturamento total para a equipe de vendas.\n",
+        "Objetivo: Calcule o valor do bônus e o faturamento final da empresa após subtrair esse bônus.\n",
+        "Faturamento inicial: 50.000\n",
+        "Percentual de bônus: 0.10"
+      ],
+      "metadata": {
+        "id": "2L03jxTtT815"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#programa para calcular o bonus e o faturamento\n",
+        "\n",
+        "faturamento_inicial = 50000\n",
+        "percentual_bonus = 0.10\n",
+        "bonus = percentual_bonus * faturamento_inicial\n",
+        "faturamento_final = faturamento_inicial - bonus\n",
+        "\n",
+        "print(f'Bonus: {bonus}')\n",
+        "print(f'faturamento inicial:{faturamento_final:.2f}')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tfjvteRTUB8J",
+        "outputId": "68b545a1-34a9-4011-8046-1a2e7810b7eb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Bonus: 5000.0\n",
+            "faturamento inicial:45000.00\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Programa para controle de Estoque de E-commerce (Logistica)\n",
+        "\n",
+        "estoque = 250\n",
+        "vendas = 78\n",
+        "recebimento = 100\n",
+        "estoque = estoque - vendas + recebimento\n",
+        "print(f'Estoque final: {estoque}')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rbWFhbipXkCC",
+        "outputId": "087790d9-abb8-4fd8-cd39-9ee9b6072a0b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Estoque final: 272\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "caixas = 1250\n",
+        "capacidade_caminhao = 12 # 12 caixas por caminhao\n",
+        "caminhoes_cheios = caixas // capacidade_caminhao\n",
+        "sobra = caixas % capacidade_caminhao\n",
+        "print(f'Caminhoes cheios: {caminhoes_cheios}')\n",
+        "print(f'Restarao {sobra} caixas')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5qbufhJRaFKh",
+        "outputId": "2ec8e623-e0bf-4f79-c601-ac2f49af27e6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Caminhoes cheios: 104\n",
+            "Restarao 2 caixas\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Exercício 4: Análise de Margem de Lucro (Financeiro)\n",
+        "\n",
+        "Cenário: Uma consultoria faturou R$ 15.000,00 em um projeto.\n",
+        "\n",
+        "Os custos fixos foram de R$ 5.000,00 e o imposto sobre o faturamento é de 15%.\n",
+        "\n",
+        "Objetivo: Calcule o imposto, o lucro líquido e a margem de lucro (Lucro / Faturamento).\n",
+        "\n",
+        "No final, crie uma variável booleana chamada meta_atingida que verifica se a margem de lucro é superior a 0.30 (30%)."
+      ],
+      "metadata": {
+        "id": "5DX7tT0bcdix"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "faturamento = 15000\n",
+        "custo_fixo = 5000\n",
+        "per_imposto = 0.15\n",
+        "imposto = faturamento * per_imposto\n",
+        "lucro = faturamento - custo_fixo - imposto\n",
+        "margem = lucro / faturamento\n",
+        "\n",
+        "\n",
+        "print(f'Faturamento: R${faturamento:,.2f}')\n",
+        "print(f'Lucro R$: {lucro: ,.2f}')\n",
+        "print(f'Margem: {margem: .0%}')\n",
+        "meta_atingida = margem > 0.30\n",
+        "print(f'Meta atingida: {meta_atingida}')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "txpUTwnBcidK",
+        "outputId": "abad614c-2623-42e9-f1de-fcbb265d32d6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Faturamento: R$15,000.00\n",
+            "Lucro R$:  7,750.00\n",
+            "Margem:  52%\n",
+            "Meta atingida: True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Exercício 1: Relatório de Margem de Lucro (Setor Financeiro)\n",
+        "\n",
+        "Uma empresa de varejo precisa de um resumo rápido sobre a performance de um produto.\n",
+        "Seja: faturamento de 45.000,00 e o custo de 23.500,00\n",
+        "Crie um programa que calcule o lucro e a margem de lucro (lucro dividido pelo faturamento).\n",
+        "Exiba uma mensagem formatada onde o lucro use o separador de milhar e duas casas decimais, e a margem seja exibida como uma porcentagem inteira."
+      ],
+      "metadata": {
+        "id": "ZEjh4ho7tFdf"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "fat = 45000\n",
+        "custo = 23500\n",
+        "lucro = fat - custo\n",
+        "margem = lucro / fat\n",
+        "print(f'Lucro: R${lucro:,.2f}, Margem : {margem: .0%}')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dy0-1YCItHkn",
+        "outputId": "d64cb923-a82b-4e23-e47b-0154e63d4640"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Lucro: R$21,500.00, Margem :  48%\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Exercício 2: Padronização de Dados de CRM (Setor de Vendas)\n",
+        "\n",
+        "Um vendedor cadastrou um cliente com os dados desorganizados no sistema:\n",
+        "nome = \" mArCoS aNtOnIo rOcHa \"\n",
+        "email = \" MARCOS.ROCHA@GMAIL.COM \"\n",
+        "Para evitar duplicidade e erros de envio, você deve:\n",
+        "Remover os espaços extras no início e fim das duas variáveis.\n",
+        "Deixar o nome apenas com as primeiras letras de cada palavra em maiúsculo (formato de nome próprio).\n",
+        "Deixar o e-mail todo em letras minúsculas. Exiba os resultados finais no console."
+      ],
+      "metadata": {
+        "id": "U4Zf02NdudbI"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nome = \"   mArCoS aNtOnIo rOcHa   \"\n",
+        "email = \" MARCOS.ROCHA@GMAIL.COM \"\n",
+        "nome = nome.strip().title()   ##Prof aloprou e meteu o title e resolveu logo o assunto\n",
+        "#nome = nome.title()  *(Um dos exemplos)*\n",
+        "e-mail = e-mail.strip().lower()\n",
+        "\n",
+        "print(nome)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 106
+        },
+        "id": "QcY6XRziupdR",
+        "outputId": "a20c42f5-e680-412d-aa80-61964a323b8c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "cannot assign to expression here. Maybe you meant '==' instead of '='? (ipython-input-3731919273.py, line 5)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"/tmp/ipython-input-3731919273.py\"\u001b[0;36m, line \u001b[0;32m5\u001b[0m\n\u001b[0;31m    e-mail = e-mail.strip().lower()\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m cannot assign to expression here. Maybe you meant '==' instead of '='?\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Exercício 1: Dashboard de Vendas (Análise de Dados)\n",
+        "\n",
+        "Você recebeu uma lista com as vendas diárias de uma equipe:\n",
+        "vendas = [1500, 2000, 800, 3500, 1200].\n",
+        "Crie um programa que exiba um pequeno relatório contendo:\n",
+        "O total de vendas na semana.\n",
+        "A média de vendas diária.\n",
+        "O valor da melhor venda e da pior venda do período."
+      ],
+      "metadata": {
+        "id": "wsTIdQOKbwjN"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "vendas = {1500, 2000, 800, 3500, 1200}\n",
+        "total_vendas = sum(vendas)\n",
+        "qtde_vendas = len(vendas)\n",
+        "media_diaria = total_vendas / qtde_vendas\n",
+        "melhor_venda = max(vendas)\n",
+        "pior_venda = min(vendas)\n",
+        "\n",
+        "\n",
+        "print(f'total de vendas: {total_vendas:.2f}, media diaria: {media_diaria:.2f}, melhor venda: {melhor_venda:.2f}, pior venda: {pior_venda:.2f}')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2chtVov4b05G",
+        "outputId": "6cc20953-8dbf-4c24-a405-cecf6d02417e"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "total de vendas: 9000.00, media diaria: 1800.00, melhor venda: 3500.00, pior venda: 800.00\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Exercício 2: Gestão de Estoque (Edição e Verificação)\n",
+        "\n",
+        "Uma loja de eletrônicos possui os seguintes produtos:\n",
+        "estoque = [\"monitor\", \"teclado\", \"mouse\", \"headset\"].\n",
+        "O gerente pediu para:\n",
+        "Adicionar o item \"webcam\" ao final da lista.\n",
+        "O \"teclado\" teve seu nome atualizado para \"teclado mecanico\". Faça essa alteração na lista.\n",
+        "Verificar se \"impressora\" está no estoque. O programa deve exibir True ou False.\n",
+        "Remover o \"mouse\" da lista, pois saiu de linha."
+      ],
+      "metadata": {
+        "id": "Xl4K8yu-fe7y"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "estoque = [\"monitor\", \"teclado\", \"mouse\", \"headset\"]\n",
+        "estoque.append(\"webcam\")\n",
+        "posicao_teclado = estoque.index(\"teclado\")\n",
+        "estoque[posicao_teclado] = \"teclado mecânico\"\n",
+        "\n",
+        "impressora_no_estoque = \"impressora\" in estoque\n",
+        "print(\"Impressora no estoque?\", impressora_no_estoque)\n",
+        "\n",
+        "estoque.remove(\"mouse\")\n",
+        "print(estoque)\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "khiife9bfjUC",
+        "outputId": "234bd5d2-f33b-4aa7-de31-36463dc46162"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Impressora no estoque? False\n",
+            "['monitor', 'teclado mecânico', 'headset', 'webcam']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "estoque = [\"monitor\", \"teclado\", \"mouse\", \"headset\"]\n",
+        "estoque.append(\"webcam\")\n",
+        "estoque[1] = \"teclado mecânico\"\n",
+        "\n",
+        "impressora_no_estoque = \"impressora\" in estoque\n",
+        "print(\"Impressora no estoque?\", impressora_no_estoque)\n",
+        "\n",
+        "estoque.remove(\"mouse\")\n",
+        "print(estoque)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2R6QpEDFia-Q",
+        "outputId": "ab8f92b1-c580-4cfd-b31f-0e18638af6f8"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Impressora no estoque? False\n",
+            "['monitor', 'teclado mecânico', 'headset', 'webcam']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Exercício 3: Organização de Preços (Ordenação e Slicing)\n",
+        "\n",
+        "Uma importadora listou os preços de frete em dólar:\n",
+        "fretes = [50, 80, 20, 150, 40].\n",
+        "Para apresentar em uma reunião, você deve:\n",
+        "Ordenar a lista do maior para o menor preço.\n",
+        "Pegar os 2 fretes mais caros (usando fatiamento/slicing) e armazenar em uma nova lista chamada top_fretes.\n",
+        "Exibir a lista original ordenada e a lista dos top_fretes."
+      ],
+      "metadata": {
+        "id": "Oi7PgZxdiEVg"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "fretes = [50, 80, 20, 150, 40]\n",
+        "fretes.sort(reverse=True)\n",
+        "top_fretes = fretes[0:2]\n",
+        "print(fretes)\n",
+        "print(top_fretes)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yxOizbWOiIcH",
+        "outputId": "113ba058-b313-42a4-97df-8c65ca823742"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[150, 80, 50, 40, 20]\n",
+            "[150, 80]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "fretes = [50, 80, 20, 150, 40]\n",
+        "print(fretes[2:5])\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pUVXsvj1jhfO",
+        "outputId": "97579892-a1c2-4546-816b-499b703e0cf3"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[20, 150, 40]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Exercício 4: Sistema de Logística (Busca e Extensão)\n",
+        "\n",
+        "A empresa \"LogTrack\" tem uma rota de entregas:\n",
+        "rota = [\"Sao Paulo\", \"Campinas\", \"Jundiai\", \"Sorocaba\"].\n",
+        "Novas cidades foram adicionadas por uma empresa parceira:\n",
+        "novas_cidades = [\"Itu\", \"Valinhos\"]. Seu script deve:\n",
+        "Unir as duas listas em uma só (usando extend).\n",
+        "Identificar em qual posição (índice) está a cidade de \"Sorocaba\".\n",
+        "Exibir a lista completa e a posição encontrada.\n",
+        "Exibir uma mensagem final: “Sorocaba é a Xª cidade da rota”"
+      ],
+      "metadata": {
+        "id": "ubP1RuqclJLr"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "rota = [\"Sao Paulo\", \"Campinas\", \"Jundial\", \"Sorocaba\"]\n",
+        "novas_cidades = [\"Itu\", \"Valinhos\"]\n"
+      ],
+      "metadata": {
+        "id": "hKrCTL9olKRU"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
